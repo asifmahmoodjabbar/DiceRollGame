@@ -1,0 +1,138 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+body {
+   background-image: url(./images/bgImage.jpg);
+   background-size: cover;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   position: relative;
+   height: 100vh;
+   color: rgb(122, 86, 86);
+}
+
+.container {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    background-color: #fff;
+    border: 3px solid rgb(5, 2, 2);
+    overflow: hidden;
+}
+
+.player-0-side,
+.player-1-side {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+.player-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 15px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: rgb(235, 77, 77);
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: rgb(235, 77, 77);
+    color: #fff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 25px;
+}
+
+
+button {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: 3px solid rgb(12, 12, 12);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:focus { outline: none; }
+
+.winner-msg { 
+    top: 45px;
+    left: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: #555;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.btn-start { top: 403px;}
+.btn-roll { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
